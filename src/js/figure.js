@@ -16,12 +16,17 @@ export default class Figure {
 		this.sizes = new THREE.Vector2(0, 0)
 		this.offset = new THREE.Vector2(0, 0)
 
+    this.image2 = this.loader.load(this.$image.dataset.img)
+
     this.uniforms = {
       uTime: {
         value: 0.0
       },
       uTex: {
         value: this.texture
+      },
+      uTex2: {
+        value: this.image2
       },
       uProg: {
         value: -0.5
